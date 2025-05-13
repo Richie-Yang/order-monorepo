@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/order-monorepo/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/order-monorepo/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/order-monorepo",
+  "projects": {
+    "order-app": {
+      "type": "application",
+      "root": "apps/order-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/order-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/order-app/tsconfig.app.json"
+      }
+    },
+    "order-monorepo": {
+      "type": "application",
+      "root": "apps/order-monorepo",
+      "entryFile": "main",
+      "sourceRoot": "apps/order-monorepo/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/order-monorepo/tsconfig.app.json"
+      }
+    },
+    "payment-app": {
+      "type": "application",
+      "root": "apps/payment-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/payment-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/payment-app/tsconfig.app.json"
+      }
+    },
+    "product-app": {
+      "type": "application",
+      "root": "apps/product-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/product-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/product-app/tsconfig.app.json"
+      }
+    }
+  }
+}
